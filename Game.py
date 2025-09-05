@@ -22,7 +22,7 @@ def ball_movement():
     if ball.colliderect(player):
         if abs(ball.bottom - player.top) < 10:  # Check if ball hits the top of the paddle
             # TODO Task 2: Fix score to increase by 1
-            score += 1
+            score += 1 # score has been fix
             ball_speed_y *= -1  # Invierte la dirección vertical
 
             # 🔹 Limite máximo de velocidad
