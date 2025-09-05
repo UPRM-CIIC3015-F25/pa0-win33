@@ -22,7 +22,7 @@ def ball_movement():
     if ball.colliderect(player):
         if abs(ball.bottom - player.top) < 10:  # Check if ball hits the top of the paddle
             # TODO Task 2: Fix score to increase by 1
-            score += 1
+            score += 1 # score has been fix
             ball_speed_y *= -1  # Invierte la dirección vertical
 
             # 🔹 Limite máximo de velocidad
@@ -140,7 +140,7 @@ while True:
     screen.fill(bg_color)  # Clear screen with background color
     pygame.draw.rect(screen, light_grey, player)  # Draw player paddle
     # TODO Task 3: Change the Ball Color
-    pygame.draw.ellipse(screen, red , ball)  # Draw ball
+    pygame.draw.ellipse(screen, red , ball)  # Draw ball # Ball color changed red
     player_text = basic_font.render(f'{score}', False, light_grey)  # Render player score
     screen.blit(player_text, (screen_width/2 - 15, 10))  # Display score on screen
 
