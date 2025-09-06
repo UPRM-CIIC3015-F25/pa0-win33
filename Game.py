@@ -139,13 +139,13 @@ while True:
     player_movement()
 
     # Visuals
-    light_grey = pygame.Color('grey83')
+    purple = pygame.Color('purple') # change the color of paddle and score to purple
     red = pygame.Color('red')
     screen.fill(bg_color)  # Clear screen with background color
-    pygame.draw.rect(screen, light_grey, player)  # Draw player paddle
+    pygame.draw.rect(screen, purple, player)  # Draw player paddle
     # TODO Task 3: Change the Ball Color
     pygame.draw.ellipse(screen, red , ball)  # Draw ball # Ball color changed red
-    player_text = basic_font.render(f'{score}', False, light_grey)  # Render player score
+    player_text = basic_font.render(f'{score}', False, purple)  # Render player score
     screen.blit(player_text, (screen_width/2 - 15, 10))  # Display score on screen
 
     # Update display
