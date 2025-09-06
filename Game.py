@@ -1,3 +1,6 @@
+import os
+from turtledemo.penrose import start
+
 import pygame, sys, random
 
 def ball_movement():
@@ -14,7 +17,7 @@ def ball_movement():
     # Start the ball movement when the game begins
     # TODO Task 5 Create a Merge Conflict
     speed = 10 # Change the speed from 7 to 10
-    speed = 5 #change from 7 to 5
+    #speed = 5 #change from 7 to 5
     if start:
         ball_speed_x = speed * random.choice((1, -1))  # Randomize initial horizontal direction
         ball_speed_y = speed * random.choice((1, -1))  # Randomize initial vertical direction
@@ -45,7 +48,6 @@ def ball_movement():
             # TODO Task 6: Add sound effects HERE
         pong_sound = pygame.mixer.Sound("pong_sound.wav")
         pong_sound.play() # added sound affect
-
 
     # Ball collision with top boundary
     if ball.top <= 0:
@@ -84,6 +86,8 @@ def restart():
 pygame.mixer.pre_init(44100, -16, 1, 1024)
 pygame.init()
 clock = pygame.time.Clock()
+pong_music = pygame.mixer.Sound("The-Rock-Electrifying-WWE.mp3")
+pong_music.play(loops=1) # added music
 
 # Main Window setup
 screen_width = 500  # Screen width (can be adjusted)
@@ -111,6 +115,7 @@ score = 0
 basic_font = pygame.font.Font('freesansbold.ttf', 32)  # Font for displaying score
 
 start = False  # Indicates if the game has started
+
 
 # Main game loop
 while True:
