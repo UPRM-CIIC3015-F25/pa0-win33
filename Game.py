@@ -6,6 +6,7 @@ def ball_movement():
     """
     global ball_speed_x, ball_speed_y, score, start
 
+
     # Move the ball
     ball.x += ball_speed_x
     ball.y += ball_speed_y
@@ -22,6 +23,7 @@ def ball_movement():
     if ball.colliderect(player):
         if abs(ball.bottom - player.top) < 10:  # Check if ball hits the top of the paddle
             # TODO Task 2: Fix score to increase by 1
+
             score += 1 # score has been fix
             ball_speed_y *= -1  # Invierte la dirección vertical
 
@@ -40,6 +42,9 @@ def ball_movement():
             else:
                 ball_speed_x = max(ball_speed_x - 0.5, -max_speed)
             # TODO Task 6: Add sound effects HERE
+        pong_sound = pygame.mixer.Sound("pong_sound.wav")
+        pong_sound.play() # added sound affect
+
 
     # Ball collision with top boundary
     if ball.top <= 0:
