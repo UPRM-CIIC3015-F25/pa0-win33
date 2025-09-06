@@ -13,6 +13,7 @@ def ball_movement():
 
     # Start the ball movement when the game begins
     # TODO Task 5 Create a Merge Conflict
+    speed = 10 # Change the speed from 7 to 10
     speed = 5 #change from 7 to 5
     if start:
         ball_speed_x = speed * random.choice((1, -1))  # Randomize initial horizontal direction
@@ -115,9 +116,7 @@ start = False  # Indicates if the game has started
 while True:
     # Event handling
     # TODO Task 4: Add your name
-    name_1 = "Edwin Cruz"
-    name_2 = "Kristopher Suarez" #added names
-
+    name = "Edwin Cruz"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # Quit the game
             pygame.quit()
