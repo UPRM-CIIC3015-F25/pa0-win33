@@ -31,20 +31,7 @@ def ball_movement():
             score += 1 # score has been fix
             ball_speed_y *= -1  # Invierte la dirección vertical
 
-            # 🔹 Limite máximo de velocidad
-            max_speed = 15
 
-            # Incrementa velocidad en Y
-            if ball_speed_y > 0:
-                ball_speed_y = min(ball_speed_y + 0.5, max_speed)
-            else:
-                ball_speed_y = max(ball_speed_y - 0.5, -max_speed)
-
-            # Incrementa velocidad en X
-            if ball_speed_x > 0:
-                ball_speed_x = min(ball_speed_x + 0.5, max_speed)
-            else:
-                ball_speed_x = max(ball_speed_x - 0.5, -max_speed)
             # TODO Task 6: Add sound effects HERE
         pong_sound = pygame.mixer.Sound("pong_sound.wav")
         pong_sound.play() # added sound affect
